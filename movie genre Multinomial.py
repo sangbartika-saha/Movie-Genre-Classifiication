@@ -167,6 +167,24 @@ for titles, genre in zip(new_synopses, predicted_genres):
     print(f"Synopsis: {titles}\nPredicted Genre: {genre}\n")
 
 
+# # EDA
+
+# In[27]:
+
+
+plt.figure(figsize=(10,15))
+sns.countplot(data=train_data, y="GENRE", order= train_data["GENRE"].value_counts().index)
+plt.show()
+
+
+# In[28]:
+
+
+plt.figure(figsize=(27,7))
+sns.countplot(data=train_data, x="GENRE", order= train_data["GENRE"].value_counts().index, palette = "YlGnBu")
+plt.show()
+
+
 # In[ ]:
 
 
